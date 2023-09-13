@@ -47,9 +47,6 @@ docker build -t cluster-availability-monitor .
 docker run -d -e CLUSTERS_CONFIG='{"cluster1": {"OW_URL": "<ow_url>","OW_CREDS": "<user>:<pass>"},"clusterN": {"OW_URL": "ow_url","OW_CREDS": "<ow_user>:<ow_pass>"}}' cluster-availability-monitor
 ```
 
-### Usage
-Once installed, the application will start monitoring the availability of the specified clusters (AWS and Azure in this case) and update the Reasoning Framework with the availability scores every minute. It will also log important information and errors in the console.
-
 ### Configuration
 Before running the application, you must configure the OpenWhisk clusters to be monitored through the CLUSTERS_CONFIG environment variable. This JSON object should map cluster names to objects containing the OW_URL and OW_CREDS properties for each cluster.
 
