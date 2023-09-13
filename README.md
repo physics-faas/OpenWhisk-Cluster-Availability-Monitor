@@ -63,3 +63,7 @@ To check the logs of the running Docker container, use the following command:
 ```bash
 docker logs <CONTAINER_ID>
 ```
+
+### Acknowledgments
+
+This project has been developed as part of the activities of the EU-funded PHYSICS project under grant agreement no 101017047.
