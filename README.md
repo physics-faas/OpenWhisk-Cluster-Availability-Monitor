@@ -23,6 +23,18 @@ These instructions will help you set up and run the project on your local machin
 pip install -r requirements.txt
 ```
 
+#### Ran Locally
+
+Export environmental variable with Openwhisk URL and Credentials
+```bash
+CLUSTERS_CONFIG='{"cluster1": {"OW_URL": "<ow_url>","OW_CREDS": "<user>:<pass>"},"clusterN": {"OW_URL": "ow_url","OW_CREDS": "<ow_user>:<ow_pass>"}}'```
+```
+Start Monitoring
+
+```bash
+python3 app.py
+```
+
 #### Docker Installation
 1. Make sure Docker is installed on your system.
 2. Build the Docker image using the following command in the project directory:
@@ -32,7 +44,7 @@ docker build -t cluster-availability-monitor .
 #### Ran Docker container
 
 ```bash
-docker run -d -e CLUSTERS_CONFIG='{"aws": {"OW_URL": "<ow_url>","OW_CREDS": "<user>:<pass>"},"azure": {"OW_URL": "ow_url","OW_CREDS": "<ow_user>:<ow_pass>"}}' cluster-availability-monitor
+docker run -d -e CLUSTERS_CONFIG='{"cluster1": {"OW_URL": "<ow_url>","OW_CREDS": "<user>:<pass>"},"clusterN": {"OW_URL": "ow_url","OW_CREDS": "<ow_user>:<ow_pass>"}}' cluster-availability-monitor
 ```
 
 ### Usage
